@@ -65,7 +65,7 @@ export default function Login() {
                         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                             <form className="space-y-6" action="#" method="POST" onSubmit={handleSignup}>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-white-900  lg:text-white-900 sm:text-white">
+                                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-white lg:text-grey-900">
                                         Email address
                                     </label>
                                     <div className="mt-2">
@@ -86,7 +86,7 @@ export default function Login() {
 
                                 <div>
                                     <div className="flex items-center justify-between">
-                                        <label htmlFor="password" className="block text-sm font-medium leading-6 text-white-900 lg:text-white-900 sm:text-white">
+                                        <label htmlFor="password" className="block text-sm font-medium leading-6  text-white lg:text-grey-900">
                                             Password
                                         </label>
 
