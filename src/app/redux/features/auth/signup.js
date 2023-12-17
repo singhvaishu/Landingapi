@@ -56,7 +56,7 @@ export default function Login() {
                         />
                     </div>
                     <div className="w-full max-w-sm p-4 rounded-md shadow-md">
-                        <h2 className="text-2xl font-bold leading-9 tracking-tight text-white-900 mb-2">
+                        <h2 className="text-2xl font-bold leading-9 tracking-tight text-white-900 mb-2  lg:text-white-900 sm:text-white">
                             Create a new  account
                         </h2>
 
@@ -64,7 +64,7 @@ export default function Login() {
                         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                             <form className="space-y-6" action="#" method="POST" onSubmit={handleSignup}>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-black-900">
+                                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-white-900  lg:text-white-900 sm:text-white">
                                         Email address
                                     </label>
                                     <div className="mt-2">
@@ -85,7 +85,7 @@ export default function Login() {
 
                                 <div>
                                     <div className="flex items-center justify-between">
-                                        <label htmlFor="password" className="block text-sm font-medium leading-6 text-black-900">
+                                        <label htmlFor="password" className="block text-sm font-medium leading-6 text-white-900 lg:text-white-900 sm:text-white">
                                             Password
                                         </label>
 
