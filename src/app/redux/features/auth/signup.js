@@ -56,7 +56,8 @@ export default function Login() {
                         />
                     </div>
                     <div className="w-full max-w-sm p-4 rounded-md shadow-md">
-                        <h2 className="text-2xl font-bold leading-9 tracking-tight text-white-900 mb-2  lg:text-white-900 sm:text-white">
+                        {/* <h2 className="text-2xl font-bold leading-9 tracking-tight text-white-900 mb-2  lg:text-white-900 sm:text-white"> */}
+                        <h2 className="text-2xl font-bold leading-9 tracking-tight mb-2 text-white lg:text-grey-900">
                             Create a new  account
                         </h2>
 
