@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { selectCount } from './authSlice';
 
 export default function Login() {
-    // const router = useRouter();
+
     const count = useSelector(selectCount);
     const dispatch = useDispatch();
     const [email, setEmail] = useState('');
@@ -21,14 +21,12 @@ export default function Login() {
             const user = await signInWithEmailAndPasswordAsync(email, password);
             console.log('User logged in:', user);
 
-            // Add logic for successful login
-            // router.push('/PostPage');
             window.location.href = '/PostPage';
 
             toast.success('Login successful!');
         } catch (error) {
             console.log('Error logging in:', error.message);
-            // Handle login error
+
             toast.error(`Error: ${error.message}`);
         }
     };
@@ -48,13 +46,14 @@ export default function Login() {
                     </div>
                     <div className="w-full max-w-sm p-4 rounded-md shadow-md">
 
-                        <h2 className="text-2xl font-bold leading-9 tracking-tight mb-2 lg:text-white-900 sm:text-white">
+                        <h2 className="text-2xl font-bold leading-9 tracking-tight mb-2 text-white lg:text-grey-900">
+
                             Sign in to your account
                         </h2>
 
                         <form className="space-y-4" action="#" method="POST" onSubmit={handleLogin}>
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium leading-6  lg:text-white-900 sm:text-white">
+                                <label htmlFor="email" className="block text-sm font-medium leading-6 text-white lg:text-grey-900">
                                     Email address
                                 </label>
                                 <div className="mt-2">
@@ -74,7 +73,7 @@ export default function Login() {
 
                             <div>
                                 <div className="flex items-center justify-between">
-                                    <label htmlFor="password" className="block text-sm font-medium leading-6  lg:text-white-900 sm:text-white">
+                                    <label htmlFor="password" className="block text-sm font-medium leading-6  text-white lg:text-grey-900">
                                         Password
                                     </label>
                                     <div className="text-sm">

@@ -17,7 +17,7 @@ import Image from 'next/image';
 
 
 export default function Login() {
-    // useClient(); // Marking this component as a client entry point
+
     const router = useRouter();
     const count = useSelector(selectCount);
     const dispatch = useDispatch();
@@ -32,11 +32,11 @@ export default function Login() {
             console.log('User signed up:', user);
 
             router.push('/PostPage');
-            // Add logic for successful signup
+
             toast.success('Signup successful!');
         } catch (error) {
             console.error('Error signing up:', error.message);
-            // Handle signup error
+
             toast.error(`Error: ${error.message}`);
         }
     };
@@ -56,7 +56,7 @@ export default function Login() {
                         />
                     </div>
                     <div className="w-full max-w-sm p-4 rounded-md shadow-md">
-                        {/* <h2 className="text-2xl font-bold leading-9 tracking-tight text-white-900 mb-2  lg:text-white-900 sm:text-white"> */}
+
                         <h2 className="text-2xl font-bold leading-9 tracking-tight mb-2 text-white lg:text-grey-900">
                             Create a new  account
                         </h2>
@@ -97,7 +97,7 @@ export default function Login() {
                                             name="password"
                                             type="password"
                                             autoComplete="current-password"
-                                            value={password} // Set the value of the input to the state
+                                            value={password}
                                             onChange={(e) => setPassword(e.target.value)} // Handle input changes
                                             required
                                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"

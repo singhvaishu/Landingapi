@@ -4,20 +4,20 @@ import firebaseConfig from './firebaseConfig';
 
 let firebaseApp;
 
-// Initialize the Firebase app with error handling
+
 try {
     firebaseApp = initializeApp(firebaseConfig);
 } catch (error) {
     if (!/already exists/.test(error.message)) {
         console.error('Firebase initialization error', error.stack);
     }
-    // Use the existing app
+
     firebaseApp = getApp();
 }
 
 const auth = getAuth(firebaseApp);
 
-// Function to validate email format
+
 const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -25,7 +25,7 @@ const isValidEmail = (email) => {
 
 export const signUpWithEmailAndPassword = async (email, password) => {
     try {
-        // Validate the email format
+
         if (!isValidEmail(email)) {
             throw new Error("Invalid email format");
         }
@@ -40,7 +40,7 @@ export const signUpWithEmailAndPassword = async (email, password) => {
 
 export const signInWithEmailAndPasswordAsync = async (email, password) => {
     try {
-        // Validate the email format
+
         if (!isValidEmail(email)) {
             throw new Error("Invalid email format");
         }
@@ -54,7 +54,7 @@ export const signInWithEmailAndPasswordAsync = async (email, password) => {
 
 export const sendPasswordResetEmailAsync = async (email) => {
     try {
-        // Validate the email format
+
         if (!isValidEmail(email)) {
             throw new Error("Invalid email format");
         }
